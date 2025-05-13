@@ -2,11 +2,37 @@
 <html lang="zxx">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/icons/favicon.svg" type="image/x-icon">
+    <!-- SEO Meta Tags -->
+    <title>Venkatesh - Full Stack Web Developer Portfolio</title>
+    <meta name="description"
+        content="Venkatesh portfolio showcases full stack web development projects, skills in Odoo ERP, and creative UI solutions.">
+    <meta name="keywords"
+        content="Venkatesh, venkatfolio, full stack developer, web developer, Odoo ERP, portfolio, UI design, freelance developer, pondicherry developer, puducherry developer">
+    <meta name="author" content="Venkatesh">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="">
+
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Venkatesh - Full Stack Web Developer Portfolio">
+    <meta property="og:description"
+        content="Explore Venkatesh's portfolio featuring web development projects, Odoo ERP expertise, and creative UI designs.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Venkatesh - Full Stack Web Developer Portfolio">
+    <meta name="twitter:description"
+        content="Explore Venkatesh's portfolio featuring web development projects, Odoo ERP expertise, and creative UI designs.">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:url" content="">
+
+    <!-- Favicon and Apple Touch Icon -->
+    <link rel="icon" type="image/svg+xml" href="img/icons/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
 
     <!-- bootstrap grid css -->
     <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
@@ -48,7 +74,7 @@
                     <nav class="navbar navbar-expand-lg bg-body-tertiary rounded mt-3 w-100">
                         <div class="container mx-2">
                             <img class="me-2" src="img/icons/favicon.svg" width="20" alt="venkatesh icon" />
-                            <a class="navbar-brand fw-bold" href="#">Venkat<span class="text-primary">Folio</span></a>
+                            <a class="navbar-brand fw-bold" href="/">Venkat<span class="text-primary">Folio</span></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                                 aria-label="Toggle navigation">
@@ -144,7 +170,7 @@
                                                     d="M7 12h-.394a2 2 0 0 0-1.11.336L3 14V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v2m-2 3h7a2 2 0 0 1 2 2v9l-2.496-1.664a2 2 0 0 0-1.11-.336H12a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2" />
                                             </svg>
                                         </span>
-                                        <a href="#" class="nav-link">Let's Talk</a>
+                                        <a href="https://wa.me/917548879400" class="nav-link text-white">Let's Talk</a>
                                     </li>
                                 </ul>
                             </div>
@@ -154,7 +180,7 @@
 
                 <div class="row my-3 align-items-stretch">
                     <div class="col-md-4 mb-4 mb-lg-0">
-                        <div class="card" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="card h-100" data-aos="fade-up" data-aos-duration="3000">
                             <img src="img/faces/profile-2.jpg" class="card-img-top cust-profile" alt="Profile image">
                             <div class="card-body">
                                 <h5 class="card-title">Hey, I'm Venkatesh 👋</h5>
@@ -346,6 +372,24 @@
     <script src="js/plugins/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        // meta tag dynamic domain
+        const currentUrl = window.location.origin;
+        const ogUrlMetaTag = document.querySelector('meta[property="og:url"]');
+        const ogUrlImgTag = document.querySelector('meta[property="og:image"]');
+        const twitterUrlImgTag = document.querySelector('meta[name="twitter:image"]');
+        const twitterUrlTag = document.querySelector('meta[name="twitter:url"]');
+        if (ogUrlMetaTag) {
+            ogUrlMetaTag.setAttribute('content', currentUrl);
+            ogUrlImgTag.setAttribute('content', currentUrl + "/img/faces/profile-2.jpg");
+            twitterUrlTag.setAttribute('content', currentUrl);
+            twitterUrlImgTag.setAttribute('content', currentUrl + "/img/faces/profile-2.jpg");
+        }
+        const canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (canonicalLink) {
+            canonicalLink.setAttribute('href', currentUrl);
+        }
     </script>
 
 </body>

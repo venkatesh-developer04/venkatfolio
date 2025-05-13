@@ -1,116 +1,130 @@
 .cust-button {
-    background-color: rgb(0, 0, 0);
-    padding: 8px 12px;
-    color: white !important;
-    border-radius: 5px;
-    transition: 0.2s;
-    width: fit-content;
-    
+  background-color: rgb(0, 0, 0);
+  padding: 8px 12px;
+  color: white !important;
+  border-radius: 5px;
+  transition: 0.2s;
+  width: fit-content;
+
 }
-.cust-button:hover{
-    background-color: rgb(73, 166, 247);
-    color: rgb(255, 255, 255) !important;
+
+.cust-button:hover {
+  background-color: rgb(73, 166, 247);
+  color: rgb(255, 255, 255) !important;
 }
+
 .video-container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh; /* Full screen height */
-    overflow: hidden;
-  }
-  
-  .bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;    
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    filter: brightness(1) blur(30px) ;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* Full screen height */
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(1) blur(30px);
 
 
-  }
-  
-  .cust-profile{
-    width:70%;
-    
-    margin: 20px auto;
-    border-radius: 50%;
+}
+
+.cust-profile {
+  width: 70%;
+
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+.scrolling-list {
+  height: 250px;
+  /* Set height based on your list size */
+  overflow: hidden;
+  position: relative;
+}
+
+.scrolling-list ul {
+  position: absolute;
+  width: 100%;
+  animation: scroll-up 10s linear infinite;
+  margin: 0;
+  padding: 0;
+
+
+
+}
+
+.scrolling-list:hover ul {
+  animation-play-state: paused;
+}
+
+
+@keyframes scroll-up {
+  0% {
+    top: 100%;
   }
 
-  .scrolling-list {
-    height: 250px; /* Set height based on your list size */
-    overflow: hidden;
-    position: relative;
+  100% {
+    top: -100%;
   }
-  
-  .scrolling-list ul {
-    position: absolute;
-    width: 100%;
-    animation: scroll-up 10s linear infinite;
-    margin: 0;
-    padding: 0;
+}
 
-    
+.project-box {
+  border-radius: 24px;
+}
 
-  }
-  .scrolling-list:hover ul {
-    animation-play-state: paused;
-  }
- 
-  
-  @keyframes scroll-up {
-    0% {
-      top: 100%;
-    }
-    100% {
-      top: -100%;
-    }
-  }
+.card {
+  background-color: rgba(255, 255, 255, 0.719) !important;
+  border-radius: 12px;
+  box-shadow: none;
+  border: none;
+  /* color: rgb(255, 255, 255) !important; */
+}
 
-  .project-box{
-    border-radius: 24px;
-  }
-  .card{
-    background-color: rgba(255, 255, 255, 0.719) !important;
-    border-radius: 12px;
-    box-shadow: none;
-    border: none;
-    /* color: rgb(255, 255, 255) !important; */
-  }
-
- .cust-nav{
+.cust-nav {
   width: fit-content;
   padding: 0px 5px;
   border-radius: 10px;
- }
- .cust-nav:hover{
+}
+
+.cust-nav:hover,
+.cust-nav:has(.nav-link.active) {
   background-color: rgb(236, 237, 238);
-  
- }
-.fa-github{
-  color: rgb(110, 110, 110) ;
+}
+
+.fa-github {
+  color: rgb(110, 110, 110);
   transition: 0.5s;
-    
- }
- .fa-github:hover{
-  color: rgb(2, 2, 2) ;
-    
- }
- .fa-linkedin{
-  color: rgb(110, 110, 110) ;
+
+}
+
+.fa-github:hover {
+  color: rgb(2, 2, 2);
+
+}
+
+.fa-linkedin {
+  color: rgb(110, 110, 110);
   transition: 0.5s;
- }
- .fa-linkedin:hover{
-  color: rgb(0, 162, 255) ;
- }
- .fa-instagram{
-  color: rgb(110, 110, 110) ;
+}
+
+.fa-linkedin:hover {
+  color: rgb(0, 162, 255);
+}
+
+.fa-instagram {
+  color: rgb(110, 110, 110);
   transition: 0.5s;
- }
- .fa-instagram:hover{
-  color: rgb(255, 0, 140) ;
- }
+}
+
+.fa-instagram:hover {
+  color: rgb(255, 0, 140);
+}

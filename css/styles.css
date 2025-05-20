@@ -1,116 +1,290 @@
 .cust-button {
-    background-color: rgb(0, 0, 0);
-    padding: 8px 12px;
-    color: white !important;
-    border-radius: 5px;
-    transition: 0.2s;
-    width: fit-content;
-    
+  background-color: rgb(0, 0, 0);
+  padding: 8px 12px;
+  color: white !important;
+  border-radius: 5px;
+  transition: 0.2s;
+  width: fit-content;
+
 }
-.cust-button:hover{
-    background-color: rgb(73, 166, 247);
-    color: rgb(255, 255, 255) !important;
+
+.cust-button:hover {
+  background-color: rgb(73, 166, 247);
+  color: rgb(255, 255, 255) !important;
 }
+
 .video-container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh; /* Full screen height */
-    overflow: hidden;
-  }
-  
-  .bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;    
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    filter: brightness(1) blur(30px) ;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(1) blur(30px);
 
 
-  }
-  
-  .cust-profile{
-    width:70%;
-    
-    margin: 20px auto;
-    border-radius: 50%;
+}
+
+
+
+/* Animation keyframes */
+@keyframes rotate-bg {
+  0% {
+    background-position: 0% 50%;
   }
 
-  .scrolling-list {
-    height: 250px; /* Set height based on your list size */
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .scrolling-list ul {
-    position: absolute;
-    width: 100%;
-    animation: scroll-up 10s linear infinite;
-    margin: 0;
-    padding: 0;
-
-    
-
-  }
-  .scrolling-list:hover ul {
-    animation-play-state: paused;
-  }
- 
-  
-  @keyframes scroll-up {
-    0% {
-      top: 100%;
-    }
-    100% {
-      top: -100%;
-    }
+  25% {
+    background-position: 50% 0%;
   }
 
-  .project-box{
-    border-radius: 24px;
-  }
-  .card{
-    background-color: rgba(255, 255, 255, 0.719) !important;
-    border-radius: 12px;
-    box-shadow: none;
-    border: none;
-    /* color: rgb(255, 255, 255) !important; */
+  50% {
+    background-position: 100% 50%;
   }
 
- .cust-nav{
+  75% {
+    background-position: 50% 100%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.cust-profile {
+  width: 88%;
+
+  margin: 20px auto;
+  border-radius: 10%;
+}
+
+.scrolling-list {
+  height: 250px;
+  /* Set height based on your list size */
+  overflow: hidden;
+  position: relative;
+}
+
+.scrolling-list ul {
+  position: absolute;
+  width: 100%;
+  animation: scroll-up 10s linear infinite;
+  margin: 0;
+  padding: 0;
+
+
+
+}
+
+.scrolling-list:hover ul {
+  animation-play-state: paused;
+}
+
+
+@keyframes scroll-up {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: -100%;
+  }
+}
+
+.project-box {
+  border-radius: 24px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.719) !important;
+  border-radius: 12px;
+  box-shadow: none;
+  border: none;
+  /* color: rgb(255, 255, 255) !important; */
+}
+
+.cust-nav {
   width: fit-content;
   padding: 0px 5px;
   border-radius: 10px;
- }
- .cust-nav:hover{
-  background-color: rgb(236, 237, 238);
-  
- }
-.fa-github{
-  color: rgb(110, 110, 110) ;
+}
+
+.cust-nav:hover,
+.cust-nav:has(.nav-link.active) {
+  background-color: #ecedee !important;
+}
+
+.fa-github {
+  color: rgb(110, 110, 110);
   transition: 0.5s;
+
+}
+
+.fa-github:hover {
+  color: rgb(2, 2, 2);
+
+}
+
+.fa-linkedin {
+  color: rgb(110, 110, 110);
+  transition: 0.5s;
+}
+
+.fa-linkedin:hover {
+  color: rgb(0, 162, 255);
+}
+
+.fa-instagram {
+  color: rgb(110, 110, 110);
+  transition: 0.5s;
+}
+
+.fa-instagram:hover {
+  color: rgb(255, 0, 140);
+}
+
+.hire-button {
+  background-color: #e2ebf8;
+  padding: 8px 12px;
+  color: #0567f1;
+  border-radius: 6px;
+  border: 1px solid #2fcceb;
+  width: fit-content;
+}
+
+.cert-model {
+  background-color: #e2e3e500;
+  padding: 14px 0px 14px 14px;
+  border-radius: 10px;
+  border: 1px solid #959697;
+  transition: 0.5s ease;
+}
+
+.cert-model:hover {
+
+  background-color: #e2e3e5;
+  border: 1px solid transparent;
+}
+
+.cust-prev,
+.cust-next {
+  width: fit-content;
+  margin: 0px 5px;
+  background-color: black;
+  border: none;
+  border-radius: 7px;
+  padding: 5px 10px;
+
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+
+  width: 1rem !important;
+  height: 1rem !important;
+
+}
+
+/* toggler */
+.container-cust {
+  cursor: pointer;
+  display: flex;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:hover {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+svg {
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active svg {
+  transform: rotate(90deg);
+}
+
+path {
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+path:nth-child(1) {
+  transform-origin: 36% 40%;
+}
+
+path:nth-child(2) {
+  stroke-dasharray: 29 299;
+}
+
+path:nth-child(3) {
+  transform-origin: 35% 63%;
+}
+
+path:nth-child(4) {
+  stroke-dasharray: 29 299;
+}
+
+path:nth-child(5) {
+  transform-origin: 61% 52%;
+}
+
+path:nth-child(6) {
+  transform-origin: 62% 52%;
+}
+
+.active path:nth-child(1) {
+  transform: translateX(9px) translateY(1px) rotate(45deg);
+}
+
+.active path:nth-child(2) {
+  stroke-dasharray: 225 299;
+  stroke-dashoffset: -72px;
+}
+
+.active path:nth-child(3) {
+  transform: translateX(9px) translateY(1px) rotate(-45deg);
+}
+
+.active path:nth-child(4) {
+  stroke-dasharray: 225 299;
+  stroke-dashoffset: -72px;
+}
+
+.active path:nth-child(5) {
+  transform: translateX(9px) translateY(1px) rotate(-45deg);
+}
+
+.active path:nth-child(6) {
+  transform: translateX(9px) translateY(1px) rotate(45deg);
+}
+
+.nav-tabs {
+
+  --bs-nav-tabs-link-active-bg: none !important;
+
+  border-bottom: none !important;
+}
+.nav-tabs .nav-link {
     
- }
- .fa-github:hover{
-  color: rgb(2, 2, 2) ;
-    
- }
- .fa-linkedin{
-  color: rgb(110, 110, 110) ;
-  transition: 0.5s;
- }
- .fa-linkedin:hover{
-  color: rgb(0, 162, 255) ;
- }
- .fa-instagram{
-  color: rgb(110, 110, 110) ;
-  transition: 0.5s;
- }
- .fa-instagram:hover{
-  color: rgb(255, 0, 140) ;
- }
+    border: none !important;
+   
+}

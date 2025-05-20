@@ -755,8 +755,7 @@ button
 form
 
 ------------------------------------------- */
-input,
-textarea {
+input {
   position: relative;
   height: 70px;
   padding: 0 30px;
@@ -771,6 +770,7 @@ textarea {
   border-bottom: solid 1px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
 }
+
 
 input:focus,
 textarea:focus {
@@ -4819,4 +4819,19 @@ html.is-animating .mil-menu-frame {
   opacity: 0;
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
+}
+
+#navbarNav .nav-tabs {
+  border-bottom: 0px;
+}
+
+#navbarNav .nav-tabs .nav-link {
+  border: 0;
+  outline: 0;
+}
+
+#navbarNav .nav-tabs .nav-item.show .nav-link,
+#navbarNav .nav-tabs .nav-link.active {
+  background-color: rgba(236, 237, 238, 0);
+  border: none !important;
 }

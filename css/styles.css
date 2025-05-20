@@ -39,6 +39,7 @@
 
 
 
+
 /* Animation keyframes */
 @keyframes rotate-bg {
   0% {
@@ -115,6 +116,60 @@
   /* color: rgb(255, 255, 255) !important; */
 }
 
+
+.cust-profile {
+  width: 70%;
+
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+.scrolling-list {
+  height: 250px;
+  /* Set height based on your list size */
+  overflow: hidden;
+  position: relative;
+}
+
+.scrolling-list ul {
+  position: absolute;
+  width: 100%;
+  animation: scroll-up 10s linear infinite;
+  margin: 0;
+  padding: 0;
+
+
+
+}
+
+.scrolling-list:hover ul {
+  animation-play-state: paused;
+}
+
+
+@keyframes scroll-up {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: -100%;
+  }
+}
+
+.project-box {
+  border-radius: 24px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.719) !important;
+  border-radius: 12px;
+  box-shadow: none;
+  border: none;
+  /* color: rgb(255, 255, 255) !important; */
+}
+
+
 .cust-nav {
   width: fit-content;
   padding: 0px 5px;
@@ -123,7 +178,11 @@
 
 .cust-nav:hover,
 .cust-nav:has(.nav-link.active) {
+
   background-color: #ecedee !important;
+
+  background-color: rgb(236, 237, 238);
+
 }
 
 .fa-github {
@@ -153,6 +212,7 @@
 
 .fa-instagram:hover {
   color: rgb(255, 0, 140);
+
 }
 
 .hire-button {
@@ -287,4 +347,5 @@ path:nth-child(6) {
     
     border: none !important;
    
+
 }
